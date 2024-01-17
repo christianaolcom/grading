@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.boy {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.circle{
+    position: relative;
+    display: flex;
+}
+.circle span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    /* border-radius: 50%; */
+    box-sizing: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: ani 15s linear infinite ;
+    animation-duration: calc(200s / var(--i));
+}
+
+.circle span:nth-child(even){
+    background-color: palevioletred;
+    box-shadow: 0 0 0 10px #ff2d7544,
+0 0 50px #000,
+0 0 100px #000,
+}
+
+
+@keyframes ani {
+0%{
+    transform: translateY(100vh) scale(0);
+}
+100%{
+    transform: translateY(-10vh) scale(1);
+}
+}
